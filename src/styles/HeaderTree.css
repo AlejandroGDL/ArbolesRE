@@ -1,0 +1,43 @@
+.HeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    height: 50px;
+}
+
+.btnAddTree{
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    border: 0px solid #fff;
+    padding: 10px;
+    background-color: #95BB72;
+    color: #ffffff;
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+.btnAddTree:hover{
+    background-color: #6f706e;
+    cursor: pointer;
+}
+
+.btnSignOut{
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    border: 0px solid #fff;
+    padding: 10px;
+    background-color: #bb7272;
+    color: #ffffff;
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+.btnSignOut:hover{
+    background-color: #6f706e;
+    cursor: pointer;
+}

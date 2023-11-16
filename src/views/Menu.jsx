@@ -2,6 +2,7 @@ import "../styles/Menu.css";
 import NavBar from "../Components/NavBar";
 import { useState, useEffect } from 'react';
 import clienteAxios from '../config/axios';
+import HeaderTree from "../Components/HeaderTree";
 
 export default function Menu() {
     const [Arboles, setArbol] = useState([])
@@ -13,13 +14,15 @@ export default function Menu() {
 
     // Metodo para obtener todas las plantas de la base de datos
     const getAllArboles = async () => {
-        const response = await clienteAxios.get('/api/Arboles')
+        const response = await clienteAxios.get('/api/ArbolesT')
         setArbol(response.data)
     }
 
     return(
         <div>
             <NavBar/>
+
+            <HeaderTree/>
 
             <table className="TableMenu">
                 <thead>
@@ -31,12 +34,12 @@ export default function Menu() {
                 </thead>
                 <tbody>
                 {Arboles.map((Arbol)=>(
-                    <tr key={Arbol.idarbol}>
-                        <td>{Arbol.idarbol}</td>
-                        <td>{Arbol.idone.temperaturaAmb}</td>
-                        <td>{Arbol.idtwo.temperaturaTierra}</td>
-                        <td>{Arbol.idone.humedadAmb}</td>
-                        <td></td>
+                    <tr key={Arbol.id}>
+                        <td>{Arbol.id}</td>
+                        <td>{Arbol.temperaturaAmb}</td>
+                        <td>{Arbol.temperaturaTierra}</td>
+                        <td>{Arbol.humedadAmb}</td>
+                        <td>{Arbol.created_at.slice(11, 19)}</td>
                     </tr>
                 ))}
                 </tbody>

@@ -12,10 +12,10 @@ class Arbol extends Model
     use HasFactory;
 
     public function sensorone(){
-        return $this->belongsTo(Sensorone::class,'idone','idone');
+        return $this->hasOne(Sensorone::class,'idone','idone');
     }
 
     public function sensortwo(){
-        return $this->belongsTo(Sensortwo::class,'idtwo','idtwo');
+        return $this->hasOne(Sensortwo::class,'idtwo','idtwo');
     }
 }

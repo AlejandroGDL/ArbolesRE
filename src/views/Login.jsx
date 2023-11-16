@@ -1,5 +1,6 @@
 import NavBar from "../Components/NavBar";
 import "../styles/Login.css";
+import { Link } from "react-router-dom";
 
 export default function Login() {
     return(
@@ -13,7 +14,7 @@ export default function Login() {
                 <input type="email" name="" id="" />
                 <p>Contraseña:</p>
                 <input type="password" name="" id="" />
-                <button type="submit" id="btnLogin">Login</button>
+                <Link to={`/Menu`}><button type="submit" id="btnLogin">Login</button></Link>
             </form>
         </div>
     )

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArbolController;
+use App\Http\Controllers\ArbolTeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,13 @@ Route::controller(ArbolController::class)->group(function(){
     Route::get('/Arboles/{id}', 'show');
     Route::put('/Arboles/{id}', 'update');
     Route::delete('/Arboles/{id}', 'destroy');
+});
+
+
+Route::controller(ArbolTeController::class)->group(function(){
+    Route::get('/ArbolesT', 'index');
+    Route::post('/AlbolT', 'store');
+    Route::get('/ArbolesT/{id}', 'show');
+    Route::put('/ArbolesT/{id}', 'update');
+    Route::delete('/ArbolesT/{id}', 'destroy');
 });
