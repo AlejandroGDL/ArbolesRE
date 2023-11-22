@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArbolController;
 use App\Http\Controllers\ArbolTeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::controller(ArbolTeController::class)->group(function(){
     Route::put('/ArbolesT/{id}', 'update');
     Route::delete('/ArbolesT/{id}', 'destroy');
 });
+
+Route::post('/Login',[AuthController::class,'Login']);
