@@ -1,7 +1,6 @@
 import clienteAxios from "../config/axios";
 import { useNavigate } from 'react-router-dom'
 
-
 export const useAuth = ({middleware,url}) => {
 
     var Navegacion = useNavigate();
@@ -17,7 +16,7 @@ export const useAuth = ({middleware,url}) => {
     }
 
     return {
-        login,
+        login
     }
 }
 

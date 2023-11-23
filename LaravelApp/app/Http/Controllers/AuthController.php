@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Passport\HasApiTokens;
+use App\Models\usuarios;
+use App\Models\User;
+use App\Models\Login;
+use PharIo\Manifest\Email;
 
 class AuthController extends Controller
 {
-    public function login(LoginRequest $request){
-        $user = Usuarios::where('Email','=',$request->Email,' and ','Password','=',$request->Password)->first();
-        $Nombre = Usuarios::where('Email','=',$request->Email)->value('User_Name');
+    public function Login(LoginRequest $request){
+        $user = usuarios::where('Email','=',$request->Email,' AND ','Password','=',$request->Password)->first();
+        $Nombre = usuarios::where('Email','=',$request->Email)->value('nombre');
 
         if ($user || $request->Email == $request->Password){
             return response()->json([
