@@ -4,7 +4,7 @@ export default function NavBar() {
 
     return(
         <div className="NavBar">
-            <img src="../src/assets/logo.png" alt="" className="NavBarImg"/>
+            <img src="../public/logo.png" alt="" className="NavBarImg"/>
         </div>
     )
 }

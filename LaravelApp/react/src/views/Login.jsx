@@ -30,8 +30,8 @@ export default function Login() {
             <NavBar />
             
             <form className="LoginForm" onSubmit={handleSubmit}>
-                <img src="../src/assets/Userico.jpg" alt="" className="Userimg"/>
-                <img src="../src/assets/logo.png" alt="" className="Logoimg"/>
+                <img src="../public/Userico.jpg" alt="" className="Userimg"/>
+                <img src="../public/logo.png" alt="" className="Logoimg"/>
                 <p>Nombre de usuario:</p>
                 <input type="email" name="Email" ref={emailRef}/>
                 <p>Contraseña:</p>
