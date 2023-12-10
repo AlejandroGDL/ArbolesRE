@@ -21,3 +21,8 @@
     font-size: 30px;
     font-weight: 500;
 }
+
+.Tablas{
+  display: flex;
+  flex-direction: row;
+}

@@ -6,6 +6,8 @@ use App\Http\Controllers\ArbolController;
 use App\Http\Controllers\ArbolTeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RelacionController;
+use App\Http\Controllers\SensoroneController;
+use App\Http\Controllers\SensortwoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,14 +28,6 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/logout',[AuthController::class,'logout']);
 });
 
-// Route::controller(ArbolController::class)->group(function(){
-//     Route::get('/Arboles', 'index');
-//     Route::post('/Arbol', 'store');
-//     Route::get('/Arboles/{id}', 'show');
-//     Route::put('/Arboles/{id}', 'update');
-//     Route::delete('/Arboles/{id}', 'destroy');
-// });
-
 
 Route::controller(ArbolTeController::class)->group(function(){
     Route::get('/ArbolesT', 'index');
@@ -45,3 +39,7 @@ Route::controller(ArbolTeController::class)->group(function(){
 
 Route::post('/Login',[AuthController::class,'Login']);
 Route::get('/Relacion',[RelacionController::class,'index']);
+
+//Sensores
+Route::get('/Sensorone',[SensoroneController::class,'index']);
+Route::get('/Sensortwo',[SensortwoController::class,'index']);
