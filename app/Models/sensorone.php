@@ -5,8 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sensorone extends Model
+class Sensorone extends Model
 {
     use HasFactory;
-    protected $fillable = ['idarbol','temperaturaAmb','humedadAmb'];
+
+    public function Arbol(){
+        return $this->hasMany(Arbol::class,'id');
+    }
 }

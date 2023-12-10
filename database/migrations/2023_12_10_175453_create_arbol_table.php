@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensortwos', function (Blueprint $table) {
-            $table->id('idtwo')->unique();
-            $table->foreignId('idarbol')->references('idarbol')->on('arbols');
-            $table->string('temperaturaTierra');
+        Schema::create('arbol', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('id_sensornone')->nullable()->constrained('sensornone')->nullOnDelete()->cascadeOnUpdate();
+            $table->foreignId('id_sensorntwo')->nullable()->constrained('sensorntwo')->nullOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensortwos');
+        Schema::dropIfExists('arbol');
     }
 };

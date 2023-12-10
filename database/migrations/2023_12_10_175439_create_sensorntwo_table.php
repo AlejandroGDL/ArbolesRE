@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('arbols', function (Blueprint $table) {
-            $table->id('idarbol')->unique();
-            $table->string('idone')->references('idone')->on('sensorones');
-            $table->string('idtwo')->references('idtwo')->on('sensortwos')->foreignId('idtwo');
+        Schema::create('sensorntwo', function (Blueprint $table) {
+            $table->id();
+            $table->string('Humidity');
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('arbols');
+        Schema::dropIfExists('sensorntwo');
     }
 };

@@ -1,10 +1,11 @@
 import "../styles/NavBar.css";
+import logo from "../assets/logo.png";
 
 export default function NavBar() {
 
     return(
         <div className="NavBar">
-            <img src="../public/logo.png" alt="" className="NavBarImg"/>
+            <img src={logo} alt="" className="NavBarImg"/>
         </div>
     )
 }

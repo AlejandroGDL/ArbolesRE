@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensorones', function (Blueprint $table) {
-            $table->id('idone')->unique();
-            $table->string('idarbol')->references('idarbol')->on('arbols');
-            $table->string('temperaturaAmb');
-            $table->string('humedadAmb');
+        Schema::create('sensornone', function (Blueprint $table) {
+            $table->id();
+            $table->string('Temperature');
+            $table->string('Humidity');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensorones');
+        Schema::dropIfExists('sensornone');
     }
 };

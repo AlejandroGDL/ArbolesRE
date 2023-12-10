@@ -1,9 +1,10 @@
 import NavBar from "../Components/NavBar";
 import "../styles/Login.css";
+import UserIco from "/src/assets/Userico.jpg";
+import logo from "/src/assets//logo.png";
 
 import useAuth from "../hook/UseAuth";
 import {createRef} from 'react';
-
 
 
 export default function Login() {
@@ -30,8 +31,8 @@ export default function Login() {
             <NavBar />
             
             <form className="LoginForm" onSubmit={handleSubmit}>
-                <img src="../public/Userico.jpg" alt="" className="Userimg"/>
-                <img src="../public/logo.png" alt="" className="Logoimg"/>
+                <img src={UserIco} alt="" className="Userimg"/>
+                <img src={logo} alt="" className="Logoimg"/>
                 <p>Nombre de usuario:</p>
                 <input type="email" name="Email" ref={emailRef}/>
                 <p>Contraseña:</p>

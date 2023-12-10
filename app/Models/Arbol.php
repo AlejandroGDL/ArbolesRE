@@ -10,12 +10,9 @@ use App\Models\Sensortwo;
 class Arbol extends Model
 {
     use HasFactory;
+    public $table = 'arbol';
 
-    public function sensorone(){
-        return $this->hasOne(Sensorone::class,'idone','idone');
-    }
-
-    public function sensortwo(){
-        return $this->hasOne(Sensortwo::class,'idtwo','idtwo');
+    public function sensors(){
+        return $this->belongsTo(Sensorone::class,'id');
     }
 }
