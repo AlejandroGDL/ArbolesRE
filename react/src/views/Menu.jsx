@@ -40,7 +40,7 @@ export default function Menu() {
 
             <HeaderTree/>
             <div className="Tablas">
-                <table className="TableMenu">
+                {/* <table className="TableMenu">
                     <thead>
                         <th>ID</th>
                     </thead>
@@ -51,7 +51,7 @@ export default function Menu() {
                         </tr>
                     ))}
                     </tbody>
-                </table>
+                </table> */}
 
                 <table className="TableMenu">
                     <thead>
@@ -71,13 +71,13 @@ export default function Menu() {
                 <table className="TableMenu">
                     <thead>
                         <th>Humedad en Tierra</th>
-                        <th>Hora</th>
+                        {/* <th>Hora</th> */}
                     </thead>
                     <tbody>
                     {Sensortwos.map((Sensortwo)=>(
                         <tr key={Sensortwo.id}>
                             <td>{Sensortwo.Humidity}</td>
-                            <td>{Sensortwo.created_at.slice(11,19)}</td>
+                            {/* <td>{Sensortwo.created_at.slice(11,19)}</td> */}
                         </tr>
                     ))}
                     </tbody>
