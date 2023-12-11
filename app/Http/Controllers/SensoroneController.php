@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\sensoruno;
 use Illuminate\Http\Request;
-use App\Models\Sensorone;
 
 class SensoroneController extends Controller
 {
@@ -12,7 +12,7 @@ class SensoroneController extends Controller
      */
     public function index()
     {
-        $Sensorone = Sensorone::all();
+        $Sensorone = sensoruno::all();
         return $Sensorone;
     }
 

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\sensordos;
 use Illuminate\Http\Request;
-use App\Models\Sensortwo;
 
 class SensortwoController extends Controller
 {
@@ -12,7 +12,7 @@ class SensortwoController extends Controller
      */
     public function index()
     {
-        $Sensorone = Sensortwo::all();
+        $Sensorone = sensordos::all();
         return $Sensorone;
     }
 
