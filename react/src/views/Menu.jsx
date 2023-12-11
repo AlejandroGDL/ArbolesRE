@@ -8,8 +8,8 @@ import HeaderTree from "../Components/HeaderTree";
 
 export default function Menu() {
     const [Arboles, setArbol] = useState([])
-    const [Sensorone, setSensorone] = useState([])
-    const [Sensortwo, setSensortwo] = useState([])
+    const [Sensorones, setSensorone] = useState([])
+    const [Sensortwos, setSensortwo] = useState([])
     
     //Primer accion al abrir 
     useEffect (()=>{
@@ -59,7 +59,7 @@ export default function Menu() {
                         <th>Humedad Ambiente</th>
                     </thead>
                     <tbody>
-                    {Sensorone.map((Sensorone)=>(
+                    {Sensorones.map((Sensorone)=>(
                         <tr key={Sensorone.id}>
                             <td>{Sensorone.Temperature}</td>
                             <td>{Sensorone.Humidity}</td>
@@ -74,7 +74,7 @@ export default function Menu() {
                         <th>Hora</th>
                     </thead>
                     <tbody>
-                    {Sensortwo.map((Sensortwo)=>(
+                    {Sensortwos.map((Sensortwo)=>(
                         <tr key={Sensortwo.id}>
                             <td>{Sensortwo.Humidity}</td>
                             <td>{Sensortwo.created_at.slice(11,19)}</td>

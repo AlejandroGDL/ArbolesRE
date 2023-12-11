@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArbolController;
 use App\Http\Controllers\ArbolTeController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\RelacionController;
 use App\Http\Controllers\SensoroneController;
 use App\Http\Controllers\SensortwoController;
 
@@ -38,7 +37,6 @@ Route::controller(ArbolTeController::class)->group(function(){
 });
 
 Route::post('/Login',[AuthController::class,'Login']);
-Route::get('/Relacion',[RelacionController::class,'index']);
 
 //Sensores
 Route::get('/Sensorone',[SensoroneController::class,'index']);
