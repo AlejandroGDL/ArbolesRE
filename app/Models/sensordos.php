@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class sensordos extends Model
 {
     use HasFactory;
+
+    public $table = "sensorntwo";
 }
