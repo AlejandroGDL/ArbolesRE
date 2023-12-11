@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Sensorone extends Model
 {
     use HasFactory;
+    
     public $table = 'sensornone';
 }
